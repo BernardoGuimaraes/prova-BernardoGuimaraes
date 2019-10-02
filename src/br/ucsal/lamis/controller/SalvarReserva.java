@@ -1,11 +1,15 @@
 package br.ucsal.lamis.controller;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import br.ucsal.lamis.model.Reserva;
+import br.ucsal.lamis.util.Repositorio;
 
 /**
  * Servlet implementation class SalvarReserva
@@ -46,6 +50,9 @@ public class SalvarReserva extends HttpServlet {
 		String sIdDiaReserva = request.getParameter("dia da reserva");
 		String sIdHoraIicio = request.getParameter("hara do inicio");
 		String sIdHoraFim =request.getParameter("hora do fim");
+		
+		Repositorio repositorio = (Repositorio) request.getSession().getServletContext().getAttribute("repositorio");
+
 		
 	}
 
